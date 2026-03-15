@@ -331,7 +331,7 @@ body {
 /* Logo */
 .top-banner .logo img {
  height: auto;
-  width: clamp(120px, 18vw, 220px);
+  width: clamp(140px, 18vw, 220px);
   display: block;
 }
 
