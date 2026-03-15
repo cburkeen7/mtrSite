@@ -90,10 +90,22 @@ body {
   border: none;
 
 }
+.contactUs-text {
+  padding: 40px 32px;
+  font-size: 25px;
+  line-height: 1.6;
+  text-align: center; /* centers the text */
+}
 
+.contact-iframe-container iframe{
+  width: 100%;
+  height: 1200px;
+  border: none;
 
-
-
+}
+.contact-iframe-container {
+  margin-top: 40px;
+}
 
 /* ---------------------------
    Residential Title Section
@@ -263,7 +275,7 @@ body {
   font-size: 18px;
 }
 
-/* LEFT (UNCHANGED) */
+/* LEFT  */
 
 .footer-left {
   justify-self: start;
@@ -474,7 +486,7 @@ nav a:hover,
 ---------------------------- */
 .about-text {
   padding: 40px 32px;
-  font-size: 16px;
+  font-size: 25px;
   line-height: 1.6;
   text-align: center; /* centers the text */
 }
