@@ -330,8 +330,8 @@ body {
 
 /* Logo */
 .top-banner .logo img {
-  height: 100px;   /* taller logo */
-  width: auto;    /* maintain aspect ratio */
+ height: auto;
+  width: clamp(120px, 18vw, 220px);
   display: block;
 }
 
