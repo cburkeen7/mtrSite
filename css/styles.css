@@ -20,7 +20,7 @@
 /* Logo image */
 .top-banner .logo img {
   display: block;
-  width: clamp(200px, 18vw, 360px);
+  width: clamp(220px, 22vw, 520px);
   height: auto;
   max-width: 100%;
 }
@@ -72,7 +72,6 @@ nav a:hover,
   transform: translateY(8px);
   transition: opacity 0.2s ease, transform 0.2s ease;
   z-index: 1000;
-
   display: flex;
   flex-direction: column;
 }
@@ -124,10 +123,6 @@ nav a:hover,
   aspect-ratio: 1 / 1;
   object-fit: cover;
   border-radius: 6px;
-}
-
-/* make the gallery images click */
-.gallery-grid img {
   cursor: pointer;
   transition: transform 0.2s ease;
 }
@@ -146,9 +141,6 @@ nav a:hover,
   border-radius: 6px;
 }
 
-
-
-
 /* ---------------------------
    FOOTER
 ---------------------------- */
@@ -164,21 +156,15 @@ nav a:hover,
   font-size: 18px;
 }
 
-/* LEFT */
-
 .footer-left {
   justify-self: start;
 }
-
-/* CENTER */
 
 .footer-center {
   justify-self: center;
   align-self: end;
   text-align: center;
 }
-
-/* RIGHT */
 
 .footer-right {
   justify-self: end;
@@ -187,8 +173,6 @@ nav a:hover,
   align-items: center;
   gap: 6px;
 }
-
-/* logos */
 
 .footer-logos {
   display: flex;
@@ -205,46 +189,53 @@ nav a:hover,
   width: 60px;
 }
 
+/* ---------------------------
+   TOOLTIP
+---------------------------- */
 
-
-
-/* Tooltip container */
 .google,
 .bbb {
   position: relative;
   display: inline-block;
 }
 
-/* Tooltip text */
 .tooltip-text {
   position: absolute;
-  bottom: 110%;
+  bottom: 120%;
   left: 50%;
   transform: translateX(-50%);
-
   background-color: black;
   color: white;
   text-align: center;
   padding: 6px 10px;
   border-radius: 4px;
-
   font-size: 14px;
-  max-width: 200px;
-  white-space: normal;
-
+  white-space: nowrap;
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.2s ease;
-
   z-index: 10;
 }
 
-/* Show tooltip */
+/* Tooltip arrow */
+.tooltip-text::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 6px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+}
+
+/* Show tooltip ONLY on hover */
 .google:hover .tooltip-text,
 .bbb:hover .tooltip-text {
   opacity: 1;
   visibility: visible;
 }
+
 /* ---------------------------
    MOBILE / TABLET RESPONSIVE
 ---------------------------- */
@@ -335,24 +326,24 @@ nav a:hover,
     height: 350px;
   }
 
-
   /* Footer stack */
-.bottom-banner {
-  grid-template-columns: 1fr;
-  text-align: center;
-  gap: 20px;
+  .bottom-banner {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .footer-left,
+  .footer-center,
+  .footer-right {
+    justify-self: center;
+  }
+
+  .footer-logos {
+    justify-content: center;
+  }
 }
 
-.footer-left,
-.footer-center,
-.footer-right {
-  justify-self: center;
-}
-
-.footer-logos {
-  justify-content: center;
-}
-}
 /* Small phones */
 @media (max-width: 480px) {
 
@@ -374,4 +365,11 @@ nav a:hover,
     height: 250px;
   }
 
+}
+
+/* Extra large screens */
+@media (min-width: 1600px) {
+  .top-banner .logo img {
+    width: 560px;
+  }
 }
