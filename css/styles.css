@@ -328,12 +328,13 @@ body {
 }
 
 .logo {
-  height: clamp(70px, 8vw, 120px);
+  width: clamp(140px, 16vw, 240px);
+  height: auto;
 }
 
 .logo img {
-  height: 100%;
-  width: auto;
+  width: 100%;
+  height: auto;
   display: block;
 }
 
@@ -542,15 +543,6 @@ nav a:hover,
 
 /* Phones */
 @media (max-width: 768px) {
-
-.logo {
-  width: clamp(120px, 30vw, 200px);
-}
-
-.logo img {
-  max-height: 70px;
-}
-
 .top-banner {
   padding: 10px 16px;
 }
@@ -641,10 +633,5 @@ nav a:hover,
   .hero-image img {
     height: 250px;
   }
-    .logo {
-    width: clamp(120px, 30vw, 200px);
-  }
-
-
 
 }
