@@ -328,13 +328,13 @@ body {
 }
 
 .logo {
-  width: clamp(170px, 18vw, 280px);
   height: auto;
+  width: auto;
 }
 
-.logo img {
-  width: 100%;
-  height: auto;
+.top-banner .logo img {
+  height: 100px;   /* taller logo on large screens */
+  width: auto;     /* maintain aspect ratio */
   display: block;
 }
 
@@ -566,6 +566,10 @@ nav a:hover,
     gap: 14px;
   }
 
+  .top-banner .logo img {
+    height: clamp(70px, 18vw, 90px);
+  }
+
   nav a,
   .dropdown-toggle {
     font-size: 18px;
@@ -638,6 +642,10 @@ nav a:hover,
 
   .hero-image img {
     height: 250px;
+  }
+
+  .top-banner .logo img {
+    height: clamp(64px, 22vw, 84px);
   }
 
 }
