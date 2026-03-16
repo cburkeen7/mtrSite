@@ -543,8 +543,16 @@ nav a:hover,
 /* Phones */
 @media (max-width: 768px) {
 
+.logo {
+  width: clamp(120px, 30vw, 200px);
+}
+
 .logo img {
   max-height: 70px;
+}
+
+.top-banner {
+  padding: 10px 16px;
 }
 
   /* Top banner stack */
