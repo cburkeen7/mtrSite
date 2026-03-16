@@ -328,7 +328,7 @@ body {
 }
 
 .logo {
-   width: clamp(250px, 40vw, 450px);
+   width: clamp(300px, 45vw, 500px);
   height: auto;
 }
 
