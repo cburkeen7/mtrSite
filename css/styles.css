@@ -205,6 +205,46 @@ nav a:hover,
   width: 60px;
 }
 
+
+
+
+/* Tooltip container */
+.google,
+.bbb {
+  position: relative;
+  display: inline-block;
+}
+
+/* Tooltip text */
+.tooltip-text {
+  position: absolute;
+  bottom: 110%;
+  left: 50%;
+  transform: translateX(-50%);
+
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 6px 10px;
+  border-radius: 4px;
+
+  font-size: 14px;
+  max-width: 200px;
+  white-space: normal;
+
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease;
+
+  z-index: 10;
+}
+
+/* Show tooltip */
+.google:hover .tooltip-text,
+.bbb:hover .tooltip-text {
+  opacity: 1;
+  visibility: visible;
+}
 /* ---------------------------
    MOBILE / TABLET RESPONSIVE
 ---------------------------- */
