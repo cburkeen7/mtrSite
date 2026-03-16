@@ -539,7 +539,7 @@ nav a:hover,
   }
 
   .top-banner .logo img {
-    height: clamp(80px, 12vw, 95px);
+    height: clamp(70px, 10vw, 85px);
   }
 
 }
@@ -571,7 +571,7 @@ nav a:hover,
   }
 
   .top-banner .logo img {
-    height: clamp(70px, 18vw, 90px);
+    height: clamp(60px, 14vw, 80px);
   }
 
   nav a,
@@ -646,6 +646,10 @@ nav a:hover,
 
   .hero-image img {
     height: 250px;
+  }
+
+  .top-banner .logo img {
+    height: clamp(56px, 20vw, 72px);
   }
 
 }
