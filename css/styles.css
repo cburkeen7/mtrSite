@@ -629,7 +629,7 @@ nav a:hover,
   .hero-image img {
     height: 250px;
   }
-    .top-banner .logo img {
+    .logo {
     width: clamp(160px, 35vw, 260px);
   }
 
