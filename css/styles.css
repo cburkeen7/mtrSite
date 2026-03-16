@@ -1,3 +1,7 @@
+body {
+  margin: 0;
+}
+
 /* Lightbox Styles */
 
 #lightbox {
@@ -18,6 +22,109 @@
   max-height: 90%;
   border-radius: 6px;
 }
+
+
+/* Tooltip container */
+.google {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+}
+
+.bbb{
+  position: relative;
+  display: inline-block;
+}
+/* Tooltip text */
+.tooltip-text {
+  visibility: hidden;
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 6px 10px;
+  border-radius: 4px;
+
+  position: absolute;
+  bottom: 105%; /* above the image */
+  left: 50%;
+  transform: translateX(-50%);
+
+  white-space: nowrap;
+  font-size: 14px;
+  z-index: 10;
+}
+
+/* Show tooltip on hover */
+.bbb:hover .tooltip-text {
+  visibility: visible;
+
+
+}
+
+.google:hover .tooltip-text {
+  visibility: visible;
+}
+/* ---------------------------
+   CONTACT US PAGE
+---------------------------- */
+.contact-title-section {
+  text-align: left;
+  padding: 60px 32px;
+}
+
+.contact-title-section h1 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.contact-title-section .placeholder-text {
+  font-size: 16px;
+  line-height: 1.6;
+  max-width: 700px;
+  margin: 0 auto 40px;
+}
+
+.contact-iframe-container iframe{
+  width: 100%;
+  height: 1200px;
+  border: none;
+
+}
+
+
+
+
+
+/* ---------------------------
+   Residential Title Section
+---------------------------- */
+
+.residential-title-section {
+  text-align: left;
+  padding: 40px 40px;
+}
+
+.residential-title-section h1 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+
+/* ---------------------------
+   Residential Section
+---------------------------- */
+
+.residential-section {
+  text-align: left;
+  padding: 40px 40px; /* keeps grid close to screen edges */
+}
+
+.residential-section h2 {
+  font-size: 28px;
+  margin-bottom: 12px;
+}
+
+
 /* ---------------------------
    Residential Image Grid
 ---------------------------- */
@@ -126,6 +233,85 @@
 }
 
 
+/* Placeholder text */
+
+.placeholder-text {
+  font-size: 16px;
+  line-height: 1.6;
+
+  max-width: 800px;
+  margin: 0 auto 20px;
+
+  text-align: center;
+}
+
+
+
+
+
+.bottom-banner {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+
+  align-items: end;   /* keeps center/right at bottom */
+
+  padding: 30px 40px;
+  background-color: #7f7f7f;
+  border-top: 1px solid #e5e5e5;
+
+  font-family: system-ui, sans-serif;
+  font-size: 18px;
+}
+
+/* LEFT (UNCHANGED) */
+
+.footer-left {
+  justify-self: start;
+}
+
+/* CENTER */
+
+.footer-center {
+  justify-self: center;
+  align-self: end;
+  text-align: center;
+}
+
+/* RIGHT */
+
+.footer-right {
+  justify-self: end;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 6px;  /* keeps heading close to logos */
+}
+
+/* logos */
+
+.footer-logos {
+  display: flex;
+  align-items: center;
+  gap: 30px; /* space between BBB and Google */
+}
+
+.footer-logos iframe {
+  width: 110px;
+  border: 0;
+}
+
+.footer-logos img {
+  width: 60px;
+}
+/* Generic hover caption for links wrapping images or iframes */
+.hover-caption {
+  position: relative;        /* container for overlay */
+  display: inline-block;
+  text-decoration: none;     /* remove underline */
+}
+
 
 
 /* ---------------------------
@@ -133,27 +319,23 @@
 ---------------------------- */
 .top-banner {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 20px 40px;
-  background-color: #7f7f7f;
+  align-items: center;             /* vertically center logo and nav */
+  justify-content: space-between;  /* logo left, nav right */
+  padding: 20px 40px;              /* larger gray box, more space from edges */
+  background-color: #7f7f7f;      /* gray background */
   border-bottom: 1px solid #e5e5e5;
-  flex-wrap: wrap;
-  gap: 20px;
+  flex-wrap: wrap;                 /* allow wrapping on small screens */
 }
 
-/* Logo container */
-.logo {
-  flex-shrink: 0;
-}
-
-/* Logo image */
-.top-banner .logo img {
+/* Logo */
+.logo img {
   display: block;
-  width: clamp(220px, 22vw, 520px);
+  width: clamp(180px, 16vw, 340px);
   height: auto;
   max-width: 100%;
 }
+
+
 
 /* ---------------------------
    NAVIGATION
@@ -162,7 +344,7 @@ nav ul {
   list-style: none;
   display: flex;
   align-items: center;
-  gap: 24px;
+  gap: 24px;      /* space between menu items */
 }
 
 nav a,
@@ -177,6 +359,7 @@ nav a,
   padding: 8px 6px;
 }
 
+/* Hover */
 nav a:hover,
 .dropdown-toggle:hover {
   color: #0077cc;
@@ -186,7 +369,7 @@ nav a:hover,
    DROPDOWN MENU
 ---------------------------- */
 .dropdown {
-  position: relative;
+  position: relative; /* ensures dropdown positions correctly */
 }
 
 .dropdown-content {
@@ -202,8 +385,9 @@ nav a:hover,
   transform: translateY(8px);
   transition: opacity 0.2s ease, transform 0.2s ease;
   z-index: 1000;
-  display: flex;
-  flex-direction: column;
+
+  display: flex;        /* use flex for alignment */
+  flex-direction: column; /* stack links vertically */
 }
 
 .dropdown-content {
@@ -215,6 +399,8 @@ nav a:hover,
 .dropdown-content li {
   padding: 0;
   margin: 0;
+  list-style: none;
+
 }
 
 .dropdown-content li a {
@@ -233,6 +419,8 @@ nav a:hover,
   visibility: visible;
   transform: translateY(0);
 }
+
+
 
 /* ---------------------------
    GALLERY GRID
@@ -253,118 +441,80 @@ nav a:hover,
   aspect-ratio: 1 / 1;
   object-fit: cover;
   border-radius: 6px;
+}
+
+/* make the gallery images click*/
+.gallery-grid img {
   cursor: pointer;
   transition: transform 0.2s ease;
 }
 
-.gallery-grid img:hover {
+.galllery-grid img:hover {
   transform: scale(1.05);
 }
+
+/* make the gallery images click*/
+.gallery-grid img {
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
 
 /* ---------------------------
    HERO IMAGE
 ---------------------------- */
 .hero-image img {
   width: 100%;
-  height: 800px;
-  object-fit: cover;
+  height: 800px; /* adjust as needed */
+  object-fit: cover; /* keeps image from stretching */
   border-radius: 6px;
 }
 
 /* ---------------------------
-   FOOTER
+   ABOUT / PLACEHOLDER TEXT
 ---------------------------- */
-
-.bottom-banner {
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
-  align-items: end;
-  padding: 30px 40px;
-  background-color: #7f7f7f;
-  border-top: 1px solid #e5e5e5;
-  font-family: system-ui, sans-serif;
-  font-size: 18px;
+.about-text {
+  padding: 40px 32px;
+  font-size: 16px;
+  line-height: 1.6;
+  text-align: center; /* centers the text */
 }
 
-.footer-left {
-  justify-self: start;
+
+.gutters-section,
+.gutter-screens-section {
+  padding: 40px 40px;
+  text-align: left;
 }
 
-.footer-center {
-  justify-self: center;
-  align-self: end;
-  text-align: center;
+.gutters-section h1,
+.gutter-screens-section h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
 }
 
-.footer-right {
-  justify-self: end;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 6px;
+.gutters-grid {
+  width: 100%;
 }
 
-.footer-logos {
-  display: flex;
-  align-items: center;
-  gap: 30px;
+.gutters-grid img {
+  width: 100%;
+  max-height: 750px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 6px;
+  display: block;
+  margin: 0 auto;
+
+  cursor: pointer;
+  transition: transform 0.2s ease;
 }
 
-.footer-logos iframe {
-  width: 110px;
-  border: 0;
-}
 
-.footer-logos img {
-  width: 60px;
-}
 
-/* ---------------------------
-   TOOLTIP
----------------------------- */
 
-.google,
-.bbb {
-  position: relative;
-  display: inline-block;
-}
 
-.tooltip-text {
-  position: absolute;
-  bottom: 120%;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: black;
-  color: white;
-  text-align: center;
-  padding: 6px 10px;
-  border-radius: 4px;
-  font-size: 14px;
-  white-space: nowrap;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.2s ease;
-  z-index: 10;
-}
 
-/* Tooltip arrow */
-.tooltip-text::after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-  border-width: 6px;
-  border-style: solid;
-  border-color: black transparent transparent transparent;
-}
-
-/* Show tooltip ONLY on hover */
-.google:hover .tooltip-text,
-.bbb:hover .tooltip-text {
-  opacity: 1;
-  visibility: visible;
-}
 
 /* ---------------------------
    MOBILE / TABLET RESPONSIVE
@@ -372,17 +522,6 @@ nav a:hover,
 
 /* Tablets */
 @media (max-width: 1024px) {
-
-  .top-banner {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  nav ul {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 16px;
-  }
 
   .gallery-grid {
     grid-template-columns: repeat(3, 1fr);
@@ -396,37 +535,32 @@ nav a:hover,
   .hero-image img {
     height: 500px;
   }
+
 }
+
 
 /* Phones */
 @media (max-width: 768px) {
 
+  /* Top banner stack */
   .top-banner {
     flex-direction: column;
     align-items: center;
-    text-align: center;
-  }
-
-  nav {
-    width: 100%;
+    gap: 15px;
   }
 
   nav ul {
     flex-wrap: wrap;
     justify-content: center;
-    gap: 12px;
-  }
-
-  nav li {
-    width: auto;
+    gap: 14px;
   }
 
   nav a,
   .dropdown-toggle {
-    font-size: 17px;
-    padding: 8px 10px;
+    font-size: 18px;
   }
 
+  /* Reduce padding */
   .gallery-page,
   .residential-section,
   .commercial-section,
@@ -435,10 +569,12 @@ nav a:hover,
     padding: 24px 16px;
   }
 
+  /* Gallery */
   .gallery-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
+  /* Residential & commercial grids */
   .residential-grid,
   .commercial-grid {
     grid-template-columns: 1fr;
@@ -452,6 +588,7 @@ nav a:hover,
     height: 200px;
   }
 
+  /* Hero image */
   .hero-image img {
     height: 350px;
   }
@@ -472,14 +609,15 @@ nav a:hover,
   .footer-logos {
     justify-content: center;
   }
+
 }
+
 
 /* Small phones */
 @media (max-width: 480px) {
 
-  nav ul {
-    flex-direction: column;
-    gap: 10px;
+  .gallery-grid {
+    grid-template-columns: 1fr;
   }
 
   nav a,
@@ -487,19 +625,12 @@ nav a:hover,
     font-size: 16px;
   }
 
-  .gallery-grid {
-    grid-template-columns: 1fr;
+  .top-banner .logo img {
+    height: 70px;
   }
 
   .hero-image img {
     height: 250px;
   }
 
-}
-
-/* Extra large screens */
-@media (min-width: 1600px) {
-  .top-banner .logo img {
-    width: 560px;
-  }
 }
