@@ -327,14 +327,13 @@ body {
   flex-wrap: wrap;                 /* allow wrapping on small screens */
 }
 
-/* Logo */
 .logo img {
   display: block;
-  width: clamp(180px, 16vw, 340px);
+  width: clamp(200px, 20vw, 420px);
   height: auto;
   max-width: 100%;
+   flex-shrink: 0;
 }
-
 
 
 /* ---------------------------
@@ -625,12 +624,13 @@ nav a:hover,
     font-size: 16px;
   }
 
-  .top-banner .logo img {
-    height: 70px;
-  }
-
   .hero-image img {
     height: 250px;
   }
+    .top-banner .logo img {
+    width: clamp(160px, 35vw, 260px);
+  }
+
+
 
 }
