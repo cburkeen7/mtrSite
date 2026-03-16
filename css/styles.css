@@ -1,17 +1,131 @@
+/* Lightbox Styles */
+
+#lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.85);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+#lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 6px;
+}
+/* ---------------------------
+   Residential Image Grid
+---------------------------- */
+
+.residential-grid {
+  display: grid;
+
+  /* responsive columns that expand across the screen */
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+
+  gap: 20px;
+  margin-top: 20px;
+}
+
+
+/* Images */
+
+.residential-grid img {
+  width: 100%;      /* fills the grid column */
+  height: 350px;    /* consistent image height */
+
+  object-fit: cover; /* prevents distortion */
+  border-radius: 6px;
+
+  display: block;
+}
+
+
+/* Placeholder text */
+
+.placeholder-text {
+  font-size: 16px;
+  line-height: 1.6;
+
+  max-width: 800px;
+  margin: 0 auto 20px;
+
+  text-align: center;
+}
+
+/* make the residential images click*/
+.residential-grid img {
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
 
 
 
 /* ---------------------------
-   SERVICE GRIDS
+   COMMERCIAL GRID SECTIONS
 ---------------------------- */
 
-.residential-grid,
-.commercial-grid,
-.gutters-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 16px;
+.commercial-title-section {
+  text-align: left;
+  padding: 40px 40px;
 }
+
+.commercial-title-section h1 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.commercial-section {
+  text-align: left;
+  padding: 40px 40px;
+}
+
+.commercial-section h2 {
+  font-size: 28px;
+  margin-bottom: 12px;
+}
+
+/* make the commercial images click*/
+.commercial-grid img {
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+
+
+/* ---------------------------
+   Commercial Image Grid
+---------------------------- */
+
+.commercial-grid {
+  display: grid;
+
+  /* responsive columns that expand across the screen */
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+
+  gap: 20px;
+  margin-top: 20px;
+}
+
+
+/* Images */
+
+.commercial-grid img {
+  width: 100%;       /* fills the grid column */
+  height: 250px;     /* consistent image height */
+
+  object-fit: cover; /* prevents distortion */
+  border-radius: 6px;
+
+  display: block;
+}
+
+
 
 
 /* ---------------------------
