@@ -328,13 +328,13 @@ body {
 }
 
 .logo {
+  width: clamp(140px, 16vw, 240px);
   height: auto;
-  width: auto;
 }
 
-.top-banner .logo img {
-  height: 100px;   /* taller logo on large screens */
-  width: auto;     /* maintain aspect ratio */
+.logo img {
+  width: 100%;
+  height: auto;
   display: block;
 }
 
@@ -538,10 +538,6 @@ nav a:hover,
     height: 500px;
   }
 
-  .top-banner .logo img {
-    height: clamp(70px, 10vw, 85px);
-  }
-
 }
 
 
@@ -558,20 +554,10 @@ nav a:hover,
     gap: 15px;
   }
 
-  nav {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-  }
-
   nav ul {
     flex-wrap: wrap;
     justify-content: center;
     gap: 14px;
-  }
-
-  .top-banner .logo img {
-    height: clamp(60px, 14vw, 80px);
   }
 
   nav a,
@@ -646,10 +632,6 @@ nav a:hover,
 
   .hero-image img {
     height: 250px;
-  }
-
-  .top-banner .logo img {
-    height: clamp(56px, 20vw, 72px);
   }
 
 }
