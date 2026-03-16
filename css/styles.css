@@ -327,12 +327,14 @@ body {
   flex-wrap: wrap;                 /* allow wrapping on small screens */
 }
 
+.logo {
+  height: clamp(70px, 8vw, 120px);
+}
+
 .logo img {
+  height: 100%;
+  width: auto;
   display: block;
-  width: clamp(200px, 20vw, 420px);
-  height: auto;
-  max-width: 100%;
-   flex-shrink: 0;
 }
 
 
