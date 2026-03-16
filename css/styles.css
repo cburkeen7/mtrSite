@@ -543,6 +543,10 @@ nav a:hover,
 /* Phones */
 @media (max-width: 768px) {
 
+.logo img {
+  max-height: 70px;
+}
+
   /* Top banner stack */
   .top-banner {
     flex-direction: column;
@@ -630,7 +634,7 @@ nav a:hover,
     height: 250px;
   }
     .logo {
-    width: clamp(160px, 35vw, 260px);
+    width: clamp(120px, 30vw, 200px);
   }
 
 
