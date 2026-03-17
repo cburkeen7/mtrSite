@@ -95,7 +95,7 @@ body {
 }
 
 
-.contactUs-Text {
+.contactUs-text {
   padding: 40px 32px;
   font-size: 25px;
   line-height: 2.5;
@@ -547,7 +547,8 @@ nav a:hover,
   }
 
   .service-text,
-  .about-text {
+  .about-text,
+  .contactUs-text {
     padding: 32px 24px;
     font-size: 22px;
     line-height: 2.0;
