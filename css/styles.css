@@ -2,6 +2,15 @@ body {
   margin: 0;
 }
 
+.service-text {
+  padding: 40px 32px;
+  font-size: 25px;
+  line-height: 2.5;
+  text-align: center; /* centers the text */
+}
+
+
+
 /* Lightbox Styles */
 
 #lightbox {
@@ -477,8 +486,8 @@ nav a:hover,
 ---------------------------- */
 .about-text {
   padding: 40px 32px;
-  font-size: 16px;
-  line-height: 1.6;
+  font-size: 25px;
+  line-height: 2.5;
   text-align: center; /* centers the text */
 }
 
