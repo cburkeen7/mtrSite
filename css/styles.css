@@ -308,6 +308,7 @@ body {
 .footer-logos iframe {
   width: 110px;
   border: 0;
+  overflow: hidden;
 }
 
 .footer-logos img {
