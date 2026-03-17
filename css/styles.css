@@ -305,9 +305,10 @@ body {
   gap: 30px; /* space between BBB and Google */
 }
 
-.footer-logos iframe {
-  width: 110px;
-  border: 0;
+.bbb {
+  width: 200px;
+  height: 65px;
+ 
   overflow: hidden;
 }
 
