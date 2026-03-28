@@ -627,7 +627,7 @@ nav a:hover,
   /* Footer stack */
   .bottom-banner {
     grid-template-columns: 1fr;
-    background-color: #a6a6a6;
+ 
     text-align: center;
     gap: 20px;
   }
