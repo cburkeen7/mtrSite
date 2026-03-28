@@ -332,7 +332,7 @@ body {
   align-items: center;             /* vertically center logo and nav */
   justify-content: space-between;  /* logo left, nav right */
   padding: 20px 40px;              /* larger gray box, more space from edges */
-  background-color: #7f7f7f;      /* gray background */
+  background-color: #a6a6a6;      /* gray background */
   border-bottom: 1px solid #e5e5e5;
   flex-wrap: wrap;                 /* allow wrapping on small screens */
 }
@@ -627,6 +627,7 @@ nav a:hover,
   /* Footer stack */
   .bottom-banner {
     grid-template-columns: 1fr;
+    background-color: #a6a6a6;
     text-align: center;
     gap: 20px;
   }
